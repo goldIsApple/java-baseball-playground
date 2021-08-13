@@ -81,7 +81,7 @@ public class RegexTest {
     @Test
     @DisplayName("문자열식이 올바른 패턴인지")
     void test10() {
-        //(123 - ) 이 패턴을 1회이상 반복후 끝나는 문자열이 숫자가 되도록
+        // (123 - ) 이 패턴을 1회이상 반복후 끝나는 문자열이 숫자가 되도록
         Pattern pattern = Pattern.compile("(\\d+\\s[\\-+*/]\\s)+\\d+$");
         assertThat(pattern.matcher("123 - 123 - 123").matches()).isTrue();
     }
@@ -91,6 +91,5 @@ public class RegexTest {
         Pattern pattern = Pattern.compile("^0[0-9]+");
         assertThat(pattern.matcher("01").matches()).isTrue();
     }
-
 
 }
